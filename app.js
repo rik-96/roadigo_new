@@ -17,7 +17,7 @@ app.use(helmet());
 app.use(compression());
 
 var mongoose = require('mongoose');
-var mongoDB = 'mongodb://roadigo_96:Ilyaroadigo2018@ds157422.mlab.com:57422/roadigo';
+var mongoDB = process.env.MONGODB_URI || 'mongodb://roadigo_96:Ilyaroadigo2018@ds157422.mlab.com:57422/roadigo';
 mongoose.connect(mongoDB, { autoIndex: false });
 mongoose.Promise = global.Promise;
 var db = mongoose.connection;
