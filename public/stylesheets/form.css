@@ -1,0 +1,89 @@
+* {
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-size: calc(5px + 1vw);
+}
+
+body{
+  background-color: #222;
+}
+
+form{
+  position: relative;
+  overflow: auto;
+  margin: auto;
+  width: 50%;
+  border: 2px solid black;
+  box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.2);
+  padding: 5% 0;
+  margin-top: 2%;
+  background-color: white;
+}
+
+input{
+  padding: calc(5px + 1%);
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin: 3%;
+  width: 94%;
+}
+
+/* Style the label to display next to the inputs */
+label {
+  display: block;
+  font-family: sans-serif;
+  margin: 3% 0 0 2%;
+}
+
+/* Style the submit button */
+input[type=submit] {
+  background-color: #0198e1;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  width: 20%;
+  margin-left: 40%;
+  margin-right: 40%;
+  cursor: pointer;
+}
+
+/* Style the container */
+.container {
+  padding: 2%;
+  background-color: transparent;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.submit_button{
+  margin-right: 50%;
+  margin-top: 4%;
+}
+
+.listoferrorshead{
+  text-align: center;
+  font-family: sans-serif;
+  font-size: calc(4px + 0.8vw);
+  padding-bottom: 1%;
+}
+
+.listoferrors{
+  color: red;
+  font-family: sans-serif;
+  font-size: calc(3px + 0.7vw);
+  text-align: center;
+  list-style-type: none;
+}
+
+@media screen and (max-width: 800px){
+  form{
+    width: 100%;
+  }
+}

@@ -1,0 +1,33 @@
+doctype html
+html(lang='en')
+  head
+    title Signup
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    link(rel='stylesheet', type='text/css', href='stylesheets/form.css')
+  body
+    .container
+      form(action='/signup' method='POST')
+        .row
+          .inputfield
+            label(for='name') Full Name
+          .inputlabel
+            input#name(type='text', name='name')
+        .row
+          .inputlabel
+            label(for='email') Email
+          .inputfield
+            input#email(type='text', name='email')
+        .row
+          .inputlabel
+            label(for='psw') Password
+          .inputfield
+            input#psw(type='password', name='psw')
+        .row
+          input(type='submit', value='Submit')
+        .row
+          if errors
+            .listoferrorshead
+              | Please correct the form:
+            ul
+              each element in errors
+                li.listoferrors= element.msg
