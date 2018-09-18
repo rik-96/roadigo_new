@@ -127,6 +127,10 @@
   background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0));
 }
 
+.invis{
+  display: none;
+}
+
 .section-title{
   font-family: 'Dancing Script';
   font-size: calc(5px + 3vw);
