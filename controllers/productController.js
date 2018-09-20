@@ -11,7 +11,24 @@ exports.product_list = function(req, res) {
 };
 
 exports.product_detail = function(req, res) {
-  res.send('Not implemented: product  detail' + req.params.id);
+  Product.findOne({prodid: req.params.prodid, category: 'products'})
+  .exec( function(err, found_prod){
+    if (err) { return res.render('index2', {logged_in: false}) }
+    if (found_prod) {
+      res.render('product', {
+        name: found_prod.name,
+        url: found_prod.url,
+        price: found_prod.price,
+        details: found_prod.details
+      })
+    } else {
+      res.render('index2', {logged_in: false})
+    }
+  })
+};
+
+exports.service_detail = function(req, res) {
+  res.send('Not implemented: service detail');
 };
 
 exports.product_create_get = function(req, res) {

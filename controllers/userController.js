@@ -25,9 +25,7 @@ exports.user_create_post = [
           email: req.body.email,
           psw: req.body.psw }
       );
-    console.log(user);
     if (!errors.isEmpty()) {
-      console.log(errors.array());
       return res.render('signupform', {errors: errors.array()});
     } else {
       User.findOne({ 'email': req.body.email })

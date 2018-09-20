@@ -1,0 +1,45 @@
+#product-head{
+  text-align: center;
+  font-size: calc(10px + 2vw);
+  margin: 7% 0 4% 0;
+}
+
+#product-img .product-image {
+  height: 80vh;
+  width: 50vw;
+  padding: 2%;
+  margin-top: 3%;
+  margin-bottom: 5%;
+  float: left;
+}
+
+.product-price{
+  text-align: center;
+  font-size: calc(5px + 1vw);
+}
+
+#buybutton{
+  cursor: pointer;
+  margin: 2% 10% 2% 58%;
+  width: 34%;
+  background-color: #9c3;
+  text-decoration: none;
+  padding: 1%;
+  text-align: center;
+  font-size: calc(5px + 1vw);
+}
+
+#buybutton a{
+  color: #fff;
+  text-decoration: none;
+}
+
+#description{
+  font-size: calc(5px + 1vw);
+  margin-left: 2%;
+}
+
+#product-features{
+  font-size: calc(3px + 0.7vw);
+  margin-left: 2%;
+}
