@@ -10,12 +10,26 @@ html
     link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css')
     script(src='https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js')
   body
-    #bginit
-      #floater
-      #home-title Roadigo
-      #tagline
+    #bginit.mySlides.fade
+      .floater
+      .home-title Roadigo
+      .tagline
         em the automotive marketplace
-      #scroll
+      .scroll
+        a(href='#store') Scroll
+    #bginit1.mySlides.fade
+      .floater
+      .home-title Roadigo
+      .tagline
+        em the automotive marketplace
+      .scroll
+        a(href='#store') Scroll
+    #bginit2.mySlides.fade
+      .floater
+      .home-title Roadigo
+      .tagline
+        em the automotive marketplace
+      .scroll
         a(href='#store') Scroll
     .sticky-top
       #navbar.topnav
@@ -153,6 +167,18 @@ html
             a.footer-links(href='#') About
     script.
       document.getElementById("bginit").style.height = window.innerHeight + 'px';
+      if(window.innerWidth > 1024){
+      window.addEventListener('resize', function(){
+      document.getElementById("initbackground").style.height = window.innerHeight + 'px';
+      })
+      }
+      document.getElementById("bginit1").style.height = window.innerHeight + 'px';
+      if(window.innerWidth > 1024){
+      window.addEventListener('resize', function(){
+      document.getElementById("initbackground").style.height = window.innerHeight + 'px';
+      })
+      }
+      document.getElementById("bginit2").style.height = window.innerHeight + 'px';
       if(window.innerWidth > 1024){
       window.addEventListener('resize', function(){
       document.getElementById("initbackground").style.height = window.innerHeight + 'px';

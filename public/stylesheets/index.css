@@ -5,6 +5,30 @@
 }
 
 #bginit{
+  background-image: url(../images/2.jpg);
+  width: 100%;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: #cf3721;
+  font-size: calc(30px + 5vw);
+  text-align: center;
+  font-family: 'Dancing Script'/*'Istok Web'*/;
+}
+
+#bginit1{
+  background-image: url(../images/1.jpg);
+  width: 100%;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: #cf3721;
+  font-size: calc(30px + 5vw);
+  text-align: center;
+  font-family: 'Dancing Script'/*'Istok Web'*/;
+}
+
+#bginit2{
   background-image: url(../images/4.jpeg);
   width: 100%;
   background-position: center center;
@@ -16,21 +40,35 @@
   font-family: 'Dancing Script'/*'Istok Web'*/;
 }
 
-#home-title{
-  display: none;
+.mySlides {display: none;}
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 5s;
+  animation-name: fade;
+  animation-duration: 5s;
 }
 
-#floater{
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+.floater{
   height: 6%;
 }
 
-#tagline{
+.tagline{
   font-size: calc(15px + 1vw);
   font-family: 'Dancing Script';
   display: none;
 }
 
-#scroll{
+.scroll{
   width: 10%;
   border: 2px solid #cf3721;
   background-color: #cf3721;
@@ -45,11 +83,11 @@
   margin-bottom: 2%;
 }
 
-#scroll a{
+.scroll a{
   color: #fff;
 }
 
-#scroll a:after{
+.scroll a:after{
   content: '\00bb';
   padding: 0 5%;
   position: absolute;
@@ -57,12 +95,12 @@
   transition: 0.5s;
 }
 
-#scroll a:hover{
+.scroll a:hover{
   text-decoration: none;
   color: #fff;
 }
 
-#scroll a:hover:after{
+.scroll a:hover:after{
   opacity: 1;
 }
 
