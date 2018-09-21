@@ -99,7 +99,7 @@
 }
 
 #navbar > a:not(.navbar-brand):hover{
-  color: #222;/* #bc13fe */
+  color: #444;/* #bc13fe */
 }
 
 #navbar > a:not(.navbar-brand){
@@ -109,7 +109,7 @@
 #navbar .navbar-brand{
   color: #222;
   font-family: 'Dancing Script';
-  font-size: calc(15px + 0.8vw);;
+  font-size: calc(15px + 0.8vw);
 }
 
 .topnav .icon{
@@ -148,14 +148,13 @@
 
 .thumb{
   text-align: center;
-  margin: 2% auto;
+  margin: 2% 0;
   font-size: calc(7px + 0.8vw);
   padding-top: 5%;
   height: 300px;
 }
 
-.thumb:not(:first-child):not(:last-child){
-  border-left: 2px solid #5ea8a7;
+.thumb:not(:last-child){
   border-right: 2px solid #5ea8a7;
   animation: border-change 10s forwards;
   animation-iteration-count: infinite;
@@ -174,7 +173,7 @@
 }
 
 .thumbnail:hover{
-  color: #ff4447;
+  color: #888;
   text-decoration: none;
   -webkit-transition: all 0.5s ease-in 0s;
   transition: all 0.5s ease-in 0s;
@@ -200,6 +199,16 @@
   100%{
     border-color: #4897d8;
   }
+}
+
+.show-more{
+  text-align: center;
+  margin-top: 2%;
+}
+
+.show-more a{
+  color: #388e3c;
+  font-size: calc(10px + 0.7vw)
 }
 
 footer{
@@ -279,6 +288,10 @@ hr.styled:after { content: "§"; display: inline-block; position: relative; top:
     margin-bottom: 5%;
   }
   hr.styled:after { content: "§"; display: inline-block; position: relative; top: -1.7em; font-size: 0.5em; padding: 0 0.25em; background: white; color: #666; }
+  .show-more{
+  margin-top: 0;
+  margin-bottom: 15%;
+}
 }
 
 @media screen and (max-width: 600px){
@@ -307,9 +320,12 @@ hr.styled:after { content: "§"; display: inline-block; position: relative; top:
 }
 
 @media screen and (max-width: 768px){
-  .thumb:not(:first-child):not(:last-child){
+  .thumb:not(:last-child){
     border-left-width: 0px;
     border-right-width: 0px;
+  }
+  .thumb{
+    height: 250px;
   }
   .img-thumbnail{
     width: 200px;
