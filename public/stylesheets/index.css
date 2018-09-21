@@ -65,7 +65,6 @@
 .tagline{
   font-size: calc(15px + 1vw);
   font-family: 'Dancing Script';
-  display: none;
 }
 
 .scroll{
@@ -306,7 +305,7 @@ hr.styled { overflow: visible; /* For IE */border: 0; height: 1px; background-im
 hr.styled:after { content: "§"; display: inline-block; position: relative; top: -0.7em; font-size: 1em; padding: 0 0.25em; background: white; color: #666; }
 
 @media screen and (max-width: 600px){
-  #home-title{
+  .home-title{
     margin-top: 15%;
   }
   #navbar a{
@@ -339,7 +338,7 @@ hr.styled:after { content: "§"; display: inline-block; position: relative; top:
     right: 0;
     top: 0;
   }
-  #scroll{
+  .scroll{
     width: 20%;
     border: 1px solid #cf3721;
     margin-bottom: 20%;
