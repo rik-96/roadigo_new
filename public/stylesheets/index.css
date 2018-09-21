@@ -325,10 +325,11 @@ hr.styled:after { content: "§"; display: inline-block; position: relative; top:
     border-right-width: 0px;
   }
   .thumb{
-    height: 250px;
+    height: 180px;
   }
   .img-thumbnail{
-    width: 200px;
+    width: 100px;
+    height: 100px;
   }
   .row{
     margin: 0;
