@@ -38,18 +38,18 @@ html
           strong Roadigo
         a.icon.navbar-brand(href='javascript:void(0);', onclick='appearDropDown()')
           i.fa.fa-bars
-        a(href='#store') Store
-        a(href='#service') Services
+        a.dropdownmenu(href='#store') Store
+        a.dropdownmenu(href='#service') Services
         #logged_in
           if logged_in
-            a.fr(href='/logout' class="pseudo-first")
+            a.dropdownmenu.fr(href='/logout' class="pseudo-first")
               i.fa.fa-user
               |  Logout
           else
-            a.fr(href="/loginform" class="pseudo-first")
+            a.dropdownmenu.fr(href="/loginform" class="pseudo-first")
               i.fa.fa-user
               |  Login
-            a.fr(href="/signupform")
+            a.dropdownmenu.fr(href="/signupform")
               i.fa.fa-user-plus
               |  Register
       hr#hrhead.hrofhead

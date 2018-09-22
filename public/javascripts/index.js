@@ -2,7 +2,10 @@ function appearDropDown(){
   var x = document.getElementById("navbar");
   var y = document.getElementById("hrhead");
   if (x.className === "topnav" || x.className === "topnav sticky"){
-    x.className += " responsive";
+    $('.topnav').addClass("responsive");
+    $('.responsive').css('opacity');
+    $('.responsive').addClass('in');
+    //x.className += " responsive";
     y.className += " invis";
   } else if (x.className === "topnav responsive") {
     x.className = "topnav";
