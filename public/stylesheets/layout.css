@@ -18,9 +18,3 @@
     border-bottom: 0px solid #999;
   }
 }
-
-@media screen and (max-width: 800px){
-  #navbar a:not(.navbar-brand){
-    margin-top: 2%;
-  }
-}
