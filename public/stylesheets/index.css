@@ -4,6 +4,16 @@
   box-sizing:border-box;
 }
 
+@font-face {
+  font-family: 'maxwell';
+  src: url('/fonts/maxwell.bold.ttf');
+}
+
+@font-face {
+  font-family: 'product';
+  src: url('/fonts/ProductSansRegular.ttf');
+}
+
 #bginit{
   background-image: url(../images/1.jpg);
   width: 100%;
@@ -13,7 +23,7 @@
   color: #cf3721;
   font-size: calc(30px + 5vw);
   text-align: center;
-  font-family: 'Dancing Script'/*'Istok Web'*/;
+  font-family: 'maxwell'/*'Istok Web'*/;
 }
 
 .logo{
@@ -32,9 +42,13 @@
   height: 6%;
 }
 
+.home-title{
+  margin-top: 7%;
+}
+
 .tagline{
   font-size: calc(15px + 1vw);
-  font-family: 'Dancing Script';
+  font-family: 'maxwell';
 }
 
 .scroll{
@@ -49,7 +63,7 @@
   left: 0;
   right: 0;
   margin: auto;
-  margin-bottom: 2%;
+  margin-bottom: 5%;
 }
 
 .scroll a{
@@ -117,6 +131,7 @@
   color: #222;
   font-family: 'Dancing Script';
   font-size: calc(15px + 0.8vw);
+  font-weight: 300;
 }
 
 .topnav .icon{
@@ -139,8 +154,8 @@
 }
 
 .section-title{
-  font-family: 'Dancing Script';
-  font-size: calc(5px + 3vw);
+  font-family: 'product';
+  font-size: calc(6px + 2vw);
   text-align: center;
   margin: 7% 0 0 0;
 }
@@ -225,9 +240,13 @@ footer{
 
 #footer-head{
   color: #888;
-  font-family: 'Dancing Script';
+  font-family: 'maxwell';
   font-size: calc(15px + 2vw);
   text-align: center;
+}
+
+sup{
+  font-size: 50%;
 }
 
 #footer-list{
