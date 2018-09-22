@@ -40,6 +40,19 @@
   font-family: 'Dancing Script'/*'Istok Web'*/;
 }
 
+.logo{
+  width: 10%;
+  height: 100px;
+  float: left;
+  margin-left: 5%;
+  margin-top: 4%;
+  fill: #cf3721;
+}
+
+.home-title{
+  width: 85%;
+}
+
 .mySlides {display: none;}
 .fade {
   -webkit-animation-name: fade;
