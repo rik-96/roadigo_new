@@ -13,8 +13,18 @@ block content
       script(src='https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js')
       script(src='/javascripts/index.js')
     body
-      #product-img
-        img.product-image(src=url)
+      #product-img-sectn
+        #product-img
+          img#expanded-img.product-image(src=url)
+        .img-row
+          .img-column
+            img(src=url, alt='Product', onclick='openImg(this);')
+          .img-column
+            img(src='/images/shop/trial.jpg', alt='Product', onclick='openImg(this);')
+          .img-column
+            img(src='/images/shop/trial.jpg', alt='Product', onclick='openImg(this);')
+          .img-column
+            img(src='/images/shop/trial.jpg', alt='Product', onclick='openImg(this);')
       #prodpage-right
         #product-head= name
         .product-price MRP: &#8377; #{price}

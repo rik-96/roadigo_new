@@ -60,14 +60,6 @@ var animateHTML = function() {
 };
 animateHTML().init();
 
-var modal = document.getElementById('id01');
-
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
-    if (event.target == modal) {
-        modal.style.display = "none";
-    }
-}
 
 var slideIndex = 0;
 showSlides();
@@ -84,3 +76,12 @@ function showSlides() {
     slides[slideIndex-1].style.display = "block";  
     setTimeout(showSlides, 5000); // Change image every 2 seconds
 }
+
+function openImg(imgs) {
+  // Get the expanded image
+  var expandImg = document.getElementById("expanded-img");
+  // Use the same src in the expanded image as the image being clicked on from the grid
+  expandImg.src = imgs.src;
+  // Show the container element (hidden with CSS)
+  expandImg.parentElement.style.display = "block";
+} 
