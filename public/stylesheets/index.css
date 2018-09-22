@@ -5,18 +5,6 @@
 }
 
 #bginit{
-  background-image: url(../images/2.jpg);
-  width: 100%;
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  color: #cf3721;
-  font-size: calc(30px + 5vw);
-  text-align: center;
-  font-family: 'Dancing Script'/*'Istok Web'*/;
-}
-
-#bginit1{
   background-image: url(../images/1.jpg);
   width: 100%;
   background-position: center center;
@@ -28,47 +16,16 @@
   font-family: 'Dancing Script'/*'Istok Web'*/;
 }
 
-#bginit2{
-  background-image: url(../images/4.jpeg);
-  width: 100%;
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  color: #cf3721;
-  font-size: calc(30px + 5vw);
-  text-align: center;
-  font-family: 'Dancing Script'/*'Istok Web'*/;
-}
-
 .logo{
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 10%;
   height: 100px;
   float: left;
   margin-left: 5%;
   margin-top: 4%;
   fill: #cf3721;
-}
-
-.home-title{
-  width: 85%;
-}
-
-.mySlides {display: none;}
-.fade {
-  -webkit-animation-name: fade;
-  -webkit-animation-duration: 5s;
-  animation-name: fade;
-  animation-duration: 5s;
-}
-
-@-webkit-keyframes fade {
-  from {opacity: .4} 
-  to {opacity: 1}
-}
-
-@keyframes fade {
-  from {opacity: .4} 
-  to {opacity: 1}
 }
 
 .floater{
@@ -320,6 +277,9 @@ hr.styled:after { content: "§"; display: inline-block; position: relative; top:
 @media screen and (max-width: 600px){
   .home-title{
     margin-top: 15%;
+  }
+  .logo{
+    width: 15%;
   }
   #navbar a{
     border: 0px solid #4d4dff;
