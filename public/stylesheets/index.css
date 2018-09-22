@@ -303,6 +303,7 @@ hr.styled:after { content: "§"; display: inline-block; position: relative; top:
   #navbar a{
     border: 0px solid #4d4dff;
     margin: 3% 3% 0 3%;
+    height: 30px;
   }
   #navbar a:hover{
     border: 0px solid #4d4dff;
