@@ -15,7 +15,7 @@
 }
 
 #bginit{
-  background-image: url(../images/1.jpg);
+  background-image: url(../images/3.jpeg);
   width: 100%;
   background-position: center center;
   background-repeat: no-repeat;
@@ -36,7 +36,7 @@
 }
 
 .logo{
-  margin-top: 10%;
+  margin-top: 3%;
   width: 40%;
   height: 40%;
   fill: #cf3721;
