@@ -1,18 +1,14 @@
 function appearDropDown(){
   var x = document.getElementById("navbar");
-  var y = document.getElementById("hrhead");
-  if (x.className === "topnav" || x.className === "topnav sticky"){
+  if (x.className === "topnav" || x.className === "topnav prod-navbar"){
     $('.topnav').addClass("responsive");
     $('.responsive').css('opacity');
     $('.responsive').addClass('in');
     //x.className += " responsive";
-    y.className += " invis";
   } else if (x.className === "topnav responsive") {
     x.className = "topnav";
-    y.className = "hrofhead";
   } else {
-    x.className = "topnav sticky";
-    y.className = "hrofhead";
+    x.className = "topnav prod-navbar";
   }
 }
 
