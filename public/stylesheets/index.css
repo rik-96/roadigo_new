@@ -179,11 +179,11 @@
   height: 300px;
 }
 
-.thumb:not(:last-child){
+/*.thumb:not(:last-child){
   border-right: 2px solid #5ea8a7;
   animation: border-change 20s forwards;
   animation-iteration-count: infinite;
-}
+}*/
 
 .thumb .prod-detail{
   margin-top: 2%;
@@ -207,7 +207,7 @@
 .img-thumbnail{
   height: 150px;
   width: 150px;
-  padding: 2%;
+  padding: 0;
   margin-bottom: 5%;
 }
 
