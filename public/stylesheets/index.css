@@ -135,12 +135,8 @@
   -webkit-transition: all 0.5s ease-in 0s;
   transition: all 0.5s ease-in 0s;
   padding: 0.5% 1%;
+  margin-top: 1%;
 }
-
-.topnav a:not(.topnav-brand){
-  margin-bottom: 1%;
-}
-
 
 .topnav .topnav-brand{
   font-family: 'Dancing Script';

@@ -1,28 +1,28 @@
 function appearDropDown(){
   var x = document.getElementById("navbar");
-  if (x.className === "topnav" || x.className === "topnav prod-navbar"){
-    $('.topnav').addClass("responsive");
+  if (x.className === "topnav topnav2" || x.className === "topnav topnav2 prod-navbar"){
+    $('.topnav2').addClass("responsive");
     $('.responsive').css('opacity');
     $('.responsive').addClass('in');
     //x.className += " responsive";
-  } else if (x.className === "topnav responsive") {
-    x.className = "topnav";
+  } else if (x.className === "topnav topnav2 responsive") {
+    x.className = "topnav topnav2";
   } else {
-    x.className = "topnav prod-navbar";
+    x.className = "topnav topnav2 prod-navbar";
   }
 }
 
 function appearDropDown2(){
   var x = document.getElementById("navbar-at-landing");
-  if (x.className === "topnav" || x.className === "topnav prod-navbar"){
-    $('.topnav').addClass("responsive");
+  if (x.className === "topnav topnav1" || x.className === "topnav topnav1 prod-navbar"){
+    $('.topnav1').addClass("responsive");
     $('.responsive').css('opacity');
     $('.responsive').addClass('in');
     //x.className += " responsive";
-  } else if (x.className === "topnav responsive") {
-    x.className = "topnav";
+  } else if (x.className === "topnav topnav1 responsive") {
+    x.className = "topnav topnav1";
   } else {
-    x.className = "topnav prod-navbar";
+    x.className = "topnav topnav1 prod-navbar";
   }
 }
 
