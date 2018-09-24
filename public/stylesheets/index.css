@@ -98,7 +98,6 @@
   overflow: hidden;
   background-color: #551a8b;
   display: none;
-  vertical-align: middle;
 }
 
 .topnav a {
@@ -112,8 +111,17 @@
   line-height: 1.5;
 }
 
+#navbar{
+  border-bottom-width: 0px;
+}
+
 #navbar .fr{
   float: right;
+}
+
+.prod-navbar{
+  display: block;
+  padding-top: 1%;
 }
 
 #navbar a{
@@ -334,10 +342,6 @@ hr.styled:after { content: "§"; display: inline-block; position: relative; top:
   .dropdownmenu{
     /*background-color: #888;*/
   }
-  #navbar .dropdownmenu:hover{
-    border: 0px solid #4d4dff;
-    color: #eee;
-  }
   .topnav a:not(:first-child){
     display: none;
   }
@@ -404,6 +408,9 @@ hr.styled:after { content: "§"; display: inline-block; position: relative; top:
   }
   .row{
     margin: 0;
+  }
+  .prod-navbar{
+    height: 50px;
   }
 }
 
