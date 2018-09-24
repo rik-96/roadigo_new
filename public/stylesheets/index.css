@@ -27,23 +27,10 @@
 }
 
 .logo{
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 10%;
-  height: 100px;
-  float: left;
-  margin-left: 1%;
-  margin-top: 3%;
+  margin-top: 10%;
+  width: 40%;
+  height: 40%;
   fill: #cf3721;
-}
-
-.floater{
-  height: 6%;
-}
-
-.home-title{
-  margin-top: 7%;
 }
 
 .tagline{
@@ -210,6 +197,7 @@
 
 .thumbnail:hover{
   color: #888;
+  opacity: 0.8;
   text-decoration: none;
   -webkit-transition: all 0.5s ease-in 0s;
   transition: all 0.5s ease-in 0s;
@@ -328,10 +316,7 @@ hr.styled:after { content: "§"; display: inline-block; position: relative; top:
 
 @media screen and (max-width: 600px){
   .home-title{
-    margin-top: 15%;
-  }
-  .logo{
-    width: 15%;
+    margin-top: 25%;
   }
   #navbar a{
     border: 0px solid #4d4dff;
@@ -417,5 +402,11 @@ hr.styled:after { content: "§"; display: inline-block; position: relative; top:
 @media screen and (max-width: 1024px){
   #footer-list li{
     padding: 1%;
+  }
+  .scroll{
+    width: 15%;
+    border: 1px solid #cf3721;
+    margin-bottom: 20%;
+    padding: 1% 0;
   }
 }
