@@ -26,6 +26,15 @@
   font-family: 'maxwell'/*'Istok Web'*/;
 }
 
+#navbar-at-landing{
+  background-color: transparent;
+  padding-right: 5%;
+}
+
+#navbar-at-landing a{
+  color: #cf3721;
+}
+
 .logo{
   margin-top: 10%;
   width: 40%;
@@ -81,10 +90,14 @@
     z-index: 2;
 }
 
+#navbar{
+  display: none;
+}
+
 .topnav {
+  font-family: 'maxwell';
   overflow: hidden;
   background-color: #551a8b;
-  display: none;
 }
 
 .topnav a {
@@ -102,30 +115,30 @@
   border-bottom-width: 0px !important;
 }
 
-#navbar .fr{
+.topnav .fr{
   float: right;
 }
 
-.prod-navbar{
+.prod-topnav{
   display: block;
 }
 
-.prod-navbar a{
+.prod-topnav a{
   padding: 0.5% 1% !important;
 }
 
-#navbar a{
+.topnav a{
   -webkit-transition: all 0.5s ease-in 0s;
   transition: all 0.5s ease-in 0s;
   padding: 0.5% 1%;
 }
 
-#navbar a:not(.navbar-brand){
+.topnav a:not(.topnav-brand){
   margin-bottom: 1%;
 }
 
 
-#navbar .navbar-brand{
+.topnav .topnav-brand{
   font-family: 'Dancing Script';
   font-size: calc(15px + 0.8vw);
   line-height: 1;
@@ -318,13 +331,13 @@ hr.styled:after { content: "§"; display: inline-block; position: relative; top:
   .home-title{
     margin-top: 25%;
   }
-  #navbar a{
+  .topnav a{
     border: 0px solid #4d4dff;
     margin: 0 3% 0 3%;
     padding-left: 2%;
     height: 30px;
   }
-  #navbar a:not(.dropdownmenu){
+  .topnav a:not(.dropdownmenu){
     margin: 3% 3% 0 3%;
   }
   .dropdownmenu{
@@ -334,11 +347,11 @@ hr.styled:after { content: "§"; display: inline-block; position: relative; top:
     display: none;
   }
   .topnav .pseudo-first{display: none;}
-  #navbar .icon{
+  .topnav #bar-icon{
     float: right;
     display: block;
   }
-  #navbar #navbar-brand{
+  .topnav #topnav-brand{
     margin-bottom: 5%;
   }
   hr.styled:after { content: "§"; display: inline-block; position: relative; top: -1.7em; font-size: 0.5em; padding: 0 0.25em; background: white; color: #666; }
@@ -361,18 +374,17 @@ hr.styled:after { content: "§"; display: inline-block; position: relative; top:
     right: 0;
     top: 0;
   }
-  .scroll{
-    width: 20%;
-    border: 1px solid #cf3721;
-    margin-bottom: 20%;
-  }
-  #navbar .fr{
+  .topnav .fr{
     float: none;
   }
   .topnav.responsive a{
     float: none;
     display: block;
     text-align: left;
+  }
+  #navbar-at-landing{
+    position: absolute;
+    width: 100%;
   }
   .in .dropdownmenu{
     opacity: 1;
@@ -406,7 +418,7 @@ hr.styled:after { content: "§"; display: inline-block; position: relative; top:
   .scroll{
     width: 15%;
     border: 1px solid #cf3721;
-    margin-bottom: 20%;
+    margin-bottom: 15%;
     padding: 1% 0;
   }
 }

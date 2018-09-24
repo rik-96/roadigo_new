@@ -12,6 +12,20 @@ function appearDropDown(){
   }
 }
 
+function appearDropDown2(){
+  var x = document.getElementById("navbar-at-landing");
+  if (x.className === "topnav" || x.className === "topnav prod-navbar"){
+    $('.topnav').addClass("responsive");
+    $('.responsive').css('opacity');
+    $('.responsive').addClass('in');
+    //x.className += " responsive";
+  } else if (x.className === "topnav responsive") {
+    x.className = "topnav";
+  } else {
+    x.className = "topnav prod-navbar";
+  }
+}
+
 setTimeout(function(){
   $('#tagline').fadeIn();
 }, 1000);

@@ -11,6 +11,25 @@ html
     script(src='https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js')
   body
     #bginit
+      #navbar-at-landing.topnav
+        a.active.navbar-brand(href='/')
+          strong Roadigo
+        a#bar-icon.icon.navbar-brand(href='javascript:void(0);', onclick='appearDropDown2()')
+          i.fa.fa-bars
+        a.dropdownmenu(href='#store') Store
+        a.dropdownmenu(href='#service') Services
+        #logged_in
+          if logged_in
+            a.dropdownmenu.fr(href='/logout' class="pseudo-first")
+              i.fa.fa-user
+              |  Logout
+          else
+            a.dropdownmenu.fr(href="/loginform" class="pseudo-first")
+              i.fa.fa-user
+              |  Login
+            a.dropdownmenu.fr(href="/signupform")
+              i.fa.fa-user-plus
+              |  Register
       .floater
       svg.home-title.logo(xmlns='http://www.w3.org/2000/svg', viewBox='0 0 1080 1080')
         style(type='text/css').
@@ -28,13 +47,11 @@ html
         path(d='M567 216c-18.7 0-36.7 2.8-53.6 8.1 -23.6 7.3-45.1 19.4-63.4 35.1 -27.4 23.4-47.6 54.9-57.1 90.8 -3.9 14.7-5.9 30.1-5.9 46v270c49.7 0 90-40.3 90-90V396c0-49.7 40.3-90 90-90h36c34.5 0 64.5-19.4 79.6-48 1.4-2.7 2.8-5.6 3.9-8.4 4.2-10.4 6.5-21.7 6.5-33.6H567z')
       .tagline
         em the automotive marketplace
-      .scroll
-        a(href='#store') Scroll
     .fixed-top
       #navbar.topnav
         a.active.navbar-brand(href='/')
           strong Roadigo
-        a.icon.navbar-brand(href='javascript:void(0);', onclick='appearDropDown()')
+        a#bar-icon.icon.navbar-brand(href='javascript:void(0);', onclick='appearDropDown()')
           i.fa.fa-bars
         a.dropdownmenu(href='#store') Store
         a.dropdownmenu(href='#service') Services
