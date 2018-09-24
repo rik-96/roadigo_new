@@ -97,7 +97,7 @@
 .topnav {
   font-family: 'maxwell';
   overflow: hidden;
-  background-color: #551a8b;
+  background-color: #e00022;
 }
 
 .topnav a {
@@ -109,6 +109,10 @@
   text-decoration: none;
   font-size: calc(10px + 0.8vw);
   line-height: 1.5;
+}
+
+.topnav a:not(.dropdownmenu){
+  font-size: calc(15px + 0.8vw);
 }
 
 #navbar{
