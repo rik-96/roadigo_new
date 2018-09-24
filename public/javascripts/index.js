@@ -1,3 +1,12 @@
+$(document).scroll(function() {
+  var y = $(this).scrollTop();
+  if (y > 50) {
+    $('#navbar').fadeIn();
+  } else {
+    $('#navbar').fadeOut();
+  }
+});
+
 function appearDropDown(){
   var x = document.getElementById("navbar");
   var y = document.getElementById("hrhead");
