@@ -112,7 +112,7 @@
 }
 
 #navbar{
-  border-bottom-width: 0px;
+  border-bottom-width: 0px !important;
 }
 
 #navbar .fr{
@@ -121,7 +121,10 @@
 
 .prod-navbar{
   display: block;
-  padding-top: 1%;
+}
+
+.prod-navbar a{
+  padding: 0.5% 1% !important;
 }
 
 #navbar a{
