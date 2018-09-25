@@ -35,6 +35,19 @@
   color: #cf3721;
 }
 
+#navbar-at-landing a::after {
+  content: '';
+  background: #cf3721;
+  display: block;
+  height: 2px;
+  width: 0;
+  transition: width .3s;
+}
+
+#navbar-at-landing a:not(.navbar-brand):hover::after {
+  width: 100%;
+}
+
 .logo{
   margin-top: 3%;
   width: 40%;
@@ -138,6 +151,19 @@
   margin-top: 1%;
 }
 
+#navbar a::after {
+  content: '';
+  background: #fff;
+  display: block;
+  height: 2px;
+  width: 0;
+  transition: width .3s;
+}
+
+#navbar a:not(.navbar-brand):hover::after {
+  width: 100%;
+}
+
 .topnav .topnav-brand{
   font-family: 'Dancing Script';
   font-size: calc(15px + 0.8vw);
@@ -157,9 +183,12 @@
   margin-top: 0;
   height: 1px;
   background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0));
+}
+
+.below_section-title {
   animation: line-change 20s forwards;
   animation-iteration-count: infinite;
-}
+ }
 
 .invis{
   display: none;

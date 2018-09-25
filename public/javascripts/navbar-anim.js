@@ -1,6 +1,6 @@
 $(document).scroll(function() {
   var y = $(this).scrollTop();
-  if (y > 20) {
+  if (y > 15) {
     $('#navbar').fadeIn();
     $('#navbar').removeClass('responsive');
     $('#navbar-at-landing').addClass('invis');
