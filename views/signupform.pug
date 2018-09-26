@@ -6,7 +6,7 @@ html(lang='en')
     link(rel='stylesheet', type='text/css', href='stylesheets/form.css')
   body
     .container
-      #form-brand roadigo.
+      #form-brand roadigo
       form(action='/signup' method='POST')
         .form-head Create An Account
         .row
@@ -25,11 +25,12 @@ html(lang='en')
           .inputfield
             input#psw(type='password', name='psw')
         .row.checkrow
-          input(type='checkbox', name='terms', value='true')
-          span.checklabel I have read and agree to the 
-            a(href='/terms') terms and conditions
-            | &nbsp;and&nbsp;
-            a(href='/privacypolicy') privacy policy
+          label
+            input(type='checkbox', name='terms', value='true')
+            span.checklabel I have read and agree to the 
+              a(href='/terms') terms and conditions
+              | &nbsp;and&nbsp;
+              a(href='/privacypolicy') privacy policy
         .row
           input(type='submit', value='Register')
         .row

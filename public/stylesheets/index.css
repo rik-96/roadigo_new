@@ -551,3 +551,12 @@ hr.styled:after { content: "§"; display: inline-block; position: relative; top:
     padding: 1% 0;
   }
 }
+
+@media screen and (min-width: 1300px){
+  #navbar .navbar-brand{
+    margin-top: 10px;
+  }
+  #navbar-at-landing .navbar-brand{
+    margin-top: 10px;
+  }
+}
