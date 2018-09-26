@@ -1,3 +1,10 @@
+$(window).on('load', function() {
+  setTimeout(function() {
+    $('#overlay').fadeOut();
+  }, 3000)
+});
+
+
 function appearDropDown(){
   var x = document.getElementById("navbar");
   if (x.className === "topnav topnav2" || x.className === "topnav topnav2 prod-navbar"){
