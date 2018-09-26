@@ -14,18 +14,6 @@
   src: url('/fonts/ProductSansRegular.ttf');
 }
 
-#bginit{
-  background-image: url(../images/3.jpeg);
-  width: 100%;
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  color: #cf3721;
-  font-size: calc(30px + 5vw);
-  text-align: center;
-  font-family: 'maxwell'/*'Istok Web'*/;
-}
-
 #navbar-at-landing{
   background-color: #fff;
 }
@@ -47,18 +35,6 @@
   width: 100%;
 }
 
-.logo{
-  margin-top: 3%;
-  width: 40%;
-  height: 40%;
-  fill: #cf3721;
-}
-
-.tagline{
-  font-size: calc(15px + 1vw);
-  font-family: 'maxwell';
-}
-
 #slide-par{
   margin-top: 5%;
 }
@@ -67,6 +43,42 @@
       width: 100%;
       height: 80vh;
   }
+
+.carousel-text{
+  position: absolute;
+  color: #fff;
+  font-size: calc(15px + 3vw);
+  background-color: #222;
+  left: 0;
+  right: 0;
+  width: 60%;
+  margin: 25vh auto 0 auto;
+  text-align: center;
+  padding-top: 3%;
+  font-family: 'maxwell';
+  padding: 1%;
+}
+
+.carousel-text .tagline{
+  font-size: calc(8px + 0.5vw);
+}
+
+#carousel-text1{
+  width: 50%;
+  background-color: #cd2a1d;
+  padding-top: 1%;
+  color: #fdd900;
+}
+
+#carousel-text2{
+  background-color: #62d3fd;
+  color: #fa8281;
+}
+
+#carousel-text3{
+  background-color: #fdd900;
+  color: #d62c0d;
+}
 
 .sticky {
     position: -webkit-sticky;
@@ -397,6 +409,9 @@ hr.styled:after { content: "§"; display: inline-block; position: relative; top:
 @media screen and (max-width: 768px){
   .carousel-inner img {
     height: 60vh;
+  }
+  .carousel-text{
+    margin-top: 20vh;
   }
   .thumb:not(:last-child){
     border-left-width: 0px;
