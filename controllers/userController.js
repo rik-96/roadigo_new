@@ -12,6 +12,7 @@ exports.user_create_get = function(req, res) {
 };
 
 exports.user_create_post = [
+  check('terms').equals('true').withMessage('Please accept terms and conditions to continue'),
   body('name', 'Name should be at least 3 letters').isLength({ min: 3 }).trim(),
   body('email', 'Please enter a valid email').isEmail().normalizeEmail(),
   check('psw').isLength({ min: 6, max: 20}).withMessage('Password must contain between 6 and 20 characters')
