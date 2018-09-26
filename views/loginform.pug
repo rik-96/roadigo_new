@@ -7,6 +7,7 @@ html(lang='en')
   body
     .container
       form(action='/login' method='POST')
+        .form-head Login
         .row
           .inputlabel
             label(for='email') Email
@@ -18,7 +19,7 @@ html(lang='en')
           .inputfield
             input#psw(type='password', name='psw')
         .row
-          input(type='submit', value='Submit', class="submit_button")
+          input(type='submit', value='Login', class="submit_button")
         .row
           if errors
             ul

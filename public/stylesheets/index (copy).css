@@ -27,7 +27,8 @@
 }
 
 #navbar-at-landing{
-  background-color: #fff;
+  background-color: transparent;
+  padding-right: 5%;
 }
 
 #navbar-at-landing a{
@@ -59,14 +60,41 @@
   font-family: 'maxwell';
 }
 
-#slide-par{
-  margin-top: 5%;
+.scroll{
+  width: 10%;
+  border: 2px solid #cf3721;
+  background-color: #cf3721;
+  border-radius: 5%;
+  font-size: calc(5px + 1.5vw);
+  font-family: 'Trebuchet MS';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  margin-bottom: 5%;
 }
 
-.carousel-inner img {
-      width: 100%;
-      height: 80vh;
-  }
+.scroll a{
+  color: #fff;
+}
+
+.scroll a:after{
+  content: '\00bb';
+  padding: 0 5%;
+  position: absolute;
+  opacity: 0;
+  transition: 0.5s;
+}
+
+.scroll a:hover{
+  text-decoration: none;
+  color: #fff;
+}
+
+.scroll a:hover:after{
+  opacity: 1;
+}
 
 .sticky {
     position: -webkit-sticky;
@@ -383,8 +411,9 @@ hr.styled:after { content: "§"; display: inline-block; position: relative; top:
     display: block;
     text-align: left;
   }
-  #slide-par{
-    margin-top: 10%;
+  #navbar-at-landing{
+    position: absolute;
+    width: 100%;
   }
   .in .dropdownmenu{
     opacity: 1;
@@ -395,9 +424,6 @@ hr.styled:after { content: "§"; display: inline-block; position: relative; top:
 }
 
 @media screen and (max-width: 768px){
-  .carousel-inner img {
-    height: 60vh;
-  }
   .thumb:not(:last-child){
     border-left-width: 0px;
     border-right-width: 0px;
