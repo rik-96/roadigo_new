@@ -1,7 +1,7 @@
 $(window).on('load', function() {
   setTimeout(function() {
     $('#overlay').fadeOut();
-  }, 3000)
+  }, 2000)
 });
 
 

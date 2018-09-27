@@ -51,7 +51,7 @@ form{
   font-size: calc(7px + 1.1vw);
 }
 
-input{
+input:not([type=checkbox]) {
   padding: calc(3px + 1%);
   border-width: 0px;
   border-bottom: 1px solid #ccc;
@@ -71,15 +71,15 @@ label {
   margin: 3% 0;
 }
 
-input[type=checkbox]{
-  float: left;
-  width: 1%;
-  height: 1%;
+.checkbox{
+  display: inline-block;
+  vertical-align:middle;
+  margin: 0 0 0 2%;
+  word-wrap: break-word;
 }
 
-.checklabel{
-  line-height: 1.4;
-  font-size: calc(7px + 0.5vw);
+input[type=checkbox]{
+  margin-left: 5%;
 }
 
 /* Style the submit button */
@@ -124,12 +124,6 @@ input[type=submit] {
   font-size: calc(3px + 0.7vw);
   text-align: center;
   list-style-type: none;
-}
-
-@media screen and (max-width: 600px){
-  .checklabel{
-    line-height: 2;
-  }
 }
 
 @media screen and (max-width: 800px){

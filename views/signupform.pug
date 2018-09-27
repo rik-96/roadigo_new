@@ -25,12 +25,11 @@ html(lang='en')
           .inputfield
             input#psw(type='password', name='psw')
         .row.checkrow
-          label
-            input(type='checkbox', name='terms', value='true')
-            span.checklabel I have read and agree to the 
-              a(href='/terms') terms and conditions
-              | &nbsp;and&nbsp;
-              a(href='/privacypolicy') privacy policy
+          input(id='checkforterms', class='checkbox', type='checkbox', name='terms', value='true')
+          label(for='checkforterms', class='checkbox') I have read and agree to the 
+            a(href='/terms') terms and conditions
+            | &nbsp;and&nbsp;
+            a(href='/privacypolicy') privacy policy
         .row
           input(type='submit', value='Register')
         .row
