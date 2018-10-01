@@ -16,7 +16,7 @@ html(lang='en')
     script(src='https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js')
     script(src='/javascripts/index.js')
   body
-    .sticky-top
+    .fixed-top
       #navbar.topnav.prod-navbar
         a.active.navbar-brand(href='/')
           strong Roadigo
@@ -36,4 +36,4 @@ html(lang='en')
             a.dropdownmenu.fr(href="/signupform")
               i.fa.fa-user-plus
               |  Register
-      block content
+    block content

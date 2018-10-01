@@ -10,6 +10,18 @@ exports.product_list = function(req, res) {
   res.send('Not implemented: product  list');
 };
 
+exports.store = function(req, res) {
+  Product.find({category: 'products'})
+  .exec( function(err, found_prod){
+    if (err) { return res.render('index2', {logged_in: false}) }
+    if (found_prod) {
+      res.render('store', {data: found_prod})
+    } else {
+      res.render('index2', {logged_in: false})
+    }
+  })
+};
+
 exports.product_detail = function(req, res) {
   Product.findOne({prodid: req.params.prodid, category: 'products'})
   .exec( function(err, found_prod){

@@ -1,0 +1,120 @@
+@font-face {
+  font-family: 'maxwell';
+  src: url('/fonts/maxwell.bold.ttf');
+}
+
+@font-face {
+  font-family: 'product';
+  src: url('/fonts/ProductSansRegular.ttf');
+}
+
+body, html{
+  margin: 0;
+  padding: 0;
+  font-family: 'product',sans-serif;
+  background-color: #f5f5f5;
+}
+
+a{
+  text-decoration: none;
+}
+
+#navbar{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #DD063D;
+  background-color: black;
+  padding: 1% 5% 1% 2%;
+}
+
+#logo{
+  width: 8%;
+  height: 8%;
+  fill: #DD063D;
+}
+
+#dropdown{
+  display: inline-block;
+  position: relative;
+}
+
+#dropdown .dropbtn {
+    border: none;
+    outline: none;
+    background-color: transparent;
+    color: #DD063D;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    width: 170%;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    margin-left: -70%;
+    font-size: calc(8px + 0.5vw);
+}
+
+.dropdown-content a {
+    color: #DD063D;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+#dropdown:hover .dropdown-content {
+    display: block;
+}
+
+#brand-name {
+  font-family: 'maxwell';
+  font-size: calc(12px + 2vw);
+}
+
+#dropdown i{
+  font-size: calc(8px + 1.4vw);
+}
+
+.content{
+  width: 100%;
+}
+
+.product-item{
+  width: 20%;
+  height: 40vh;
+  display: inline-block;
+  background-color: white;
+  text-align: center;
+  box-shadow: 0 0 10px 3px rgba(0,0,0,.11);
+  margin: 4% 2.5%;
+}
+
+.product-image{
+  width: 90%;
+  height: 70%;
+  margin: 5%;
+}
+
+.product-name{
+  color: #222;
+  font-size: calc(8px + 0.5vw);
+}
+
+.product-price{
+  color: #ec8719;
+  font-size: calc(8px + 0.5vw);
+}
+
+@media screen and (max-width: 600px){
+  .product-item{
+    width: 40%;
+    margin: 4% 5%;
+  }
+}
