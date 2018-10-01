@@ -72,8 +72,8 @@ html
           strong roadigo
         a#bar-icon.icon.navbar-brand(href='javascript:void(0);', onclick='appearDropDown2()')
           i.fa.fa-bars
-        a.dropdownmenu(href='#store') Store
-        a.dropdownmenu(href='#service') Services
+        a.dropdownmenu(href='/store') Store
+        a.dropdownmenu(href='/store') Services
         #logged_in
           if logged_in
             a.dropdownmenu.fr(href='/logout' class="pseudo-first")
@@ -110,8 +110,8 @@ html
           strong roadigo
         a#bar-icon.icon.navbar-brand(href='javascript:void(0);', onclick='appearDropDown()')
           i.fa.fa-bars
-        a.dropdownmenu(href='#store') Store
-        a.dropdownmenu(href='#service') Services
+        a.dropdownmenu(href='/store') Store
+        a.dropdownmenu(href='/store') Services
         #logged_in
           if logged_in
             a.dropdownmenu.fr(href='/logout' class="pseudo-first")
@@ -216,7 +216,7 @@ html
               .prod-detail Service
               .prod-price ₹ 9999
       .show-more
-        a(href='/services') Show more
+        a(href='/store') Show more
     footer
       #footer-head Roadigo
         sup ©
