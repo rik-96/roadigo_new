@@ -27,13 +27,10 @@ html(lang='en')
         #logged_in
           if logged_in
             a.dropdownmenu.fr(href='/logout' class="pseudo-first")
-              i.fa.fa-user
               |  Logout
           else
             a.dropdownmenu.fr(href="/loginform" class="pseudo-first")
-              i.fa.fa-user
               |  Login
             a.dropdownmenu.fr(href="/signupform")
-              i.fa.fa-user-plus
               |  Register
     block content

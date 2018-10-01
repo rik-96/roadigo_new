@@ -75,7 +75,7 @@ a{
 
 #brand-name {
   font-family: 'maxwell';
-  font-size: calc(12px + 2vw);
+  font-size: calc(10px + 2.5vw);
 }
 
 #dropdown i{
@@ -88,12 +88,13 @@ a{
 
 .product-item{
   width: 20%;
-  height: 40vh;
+  height: 45vh;
   display: inline-block;
   background-color: white;
   text-align: center;
   box-shadow: 0 0 10px 3px rgba(0,0,0,.11);
   margin: 4% 2.5%;
+  vertical-align: middle;
 }
 
 .product-image{
@@ -115,6 +116,11 @@ a{
 @media screen and (max-width: 600px){
   .product-item{
     width: 40%;
+    height: 30vh;
     margin: 4% 5%;
+  }
+  #navbar{
+    padding-top: 2%;
+    padding-bottom: 2%;
   }
 }
