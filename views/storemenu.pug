@@ -33,11 +33,13 @@ html
           a(href='#') Cart
     .content
       if data
-        each element in data
-          .category
-            a(href = element.url)
-              img.category-img(src=element.imgurl)
-              .category-name!= element.name
+        each ele, key in data
+          .category-head!= key
+          each element in ele
+            .category
+              a(href = element.url)
+                img.category-img(src=element.imgurl)
+                .category-name!= element.name
     footer
       #footer-head Roadigo
         sup ©

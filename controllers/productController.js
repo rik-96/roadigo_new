@@ -16,7 +16,17 @@ exports.storemenu = function(req, res) {
   .exec( function(err, found_prod){
     if (err) { return res.render('index2', {logged_in: false}) }
     if (found_prod) {
-      res.render('storemenu', {data: found_prod})
+      var cat = {};
+      found_prod.forEach(function(elem){
+        var ele = elem.toObject();
+        if (ele.subcategory in cat){
+          cat[ele.subcategory].push(ele);
+        } else {
+          cat[ele.subcategory] = [ele];
+        }
+      });
+      console.log(cat)
+      res.render('storemenu', {data: cat})
     } else {
       res.render('index2', {logged_in: false})
     }
