@@ -110,6 +110,7 @@ a{
 .product-name{
   color: #222;
   font-size: calc(8px + 0.5vw);
+  margin: 0 5%;
 }
 
 .product-price{
