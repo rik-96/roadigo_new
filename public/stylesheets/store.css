@@ -20,12 +20,14 @@ a{
 }
 
 #navbar{
+  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
   color: #DD063D;
   background-color: black;
   padding: 1% 5% 1% 2%;
+  position: fixed;
 }
 
 #logo{
@@ -37,6 +39,7 @@ a{
 #dropdown{
   display: inline-block;
   position: relative;
+  margin-right: 10%;
 }
 
 #dropdown .dropbtn {
@@ -84,6 +87,7 @@ a{
 
 .content{
   width: 100%;
+  padding-top: 10%;
 }
 
 .product-item{
@@ -113,14 +117,73 @@ a{
   font-size: calc(8px + 0.5vw);
 }
 
+hr.styled { overflow: visible; /* For IE */border: 0; height: 1px; background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0)); text-align: center; } 
+hr.styled:after { content: "§"; display: inline-block; position: relative; top: -0.7em; font-size: 1em; padding: 0 0.25em; background: white; color: #666; }
+
+footer{
+  overflow: auto;
+  margin-top: 5%;
+}
+
+#footer-head{
+  color: #888;
+  font-family: 'maxwell';
+  font-size: calc(15px + 2vw);
+  text-align: center;
+}
+
+sup{
+  font-size: 50%;
+}
+
+#footer-list{
+  list-style-type: none;
+  display: block;
+}
+
+.footer-links{
+  color: #888;
+  font-size: calc(8px + 0.7vw);;
+}
+
+.footer-links:hover{
+  text-decoration: none;
+  color: #222;
+}
+
+#footer-body{
+  text-align: center;
+  width: 100%;
+  margin-top: 2%;
+}
+
+#footer-list li{
+  display: inline-block;
+  padding: 1% 2%;
+}
+
+#footer-list{
+  padding: 0;
+}
+
 @media screen and (max-width: 600px){
   .product-item{
     width: 40%;
-    height: 30vh;
+    height: 35vh;
     margin: 4% 5%;
+  }
+  .content{
+    padding-top: 15%;
   }
   #navbar{
     padding-top: 2%;
     padding-bottom: 2%;
+  }
+  hr.styled:after { content: "§"; display: inline-block; position: relative; top: -1.7em; font-size: 0.5em; padding: 0 0.25em; background: white; color: #666; }
+  #footer-list li{
+    display: block;
+  }
+  #footer-list li{
+    padding: 1%;
   }
 }
