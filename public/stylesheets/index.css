@@ -471,10 +471,6 @@ hr.styled:after { content: "§"; display: inline-block; position: relative; top:
     margin-bottom: 5%;
   }
   hr.styled:after { content: "§"; display: inline-block; position: relative; top: -1.7em; font-size: 0.5em; padding: 0 0.25em; background: white; color: #666; }
-  .show-more{
-  margin-top: 0;
-  margin-bottom: 15%;
-}
 }
 
 @media screen and (max-width: 600px){

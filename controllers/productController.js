@@ -1,4 +1,5 @@
 var Product = require('../models/product');
+var Category = require('../models/category');
 
 var async = require('async');
 
@@ -8,6 +9,18 @@ exports.index = function(req, res) {
 
 exports.product_list = function(req, res) {
   res.send('Not implemented: product  list');
+};
+
+exports.storemenu = function(req, res) {
+  Category.find({category: 'products'})
+  .exec( function(err, found_prod){
+    if (err) { return res.render('index2', {logged_in: false}) }
+    if (found_prod) {
+      res.render('storemenu', {data: found_prod})
+    } else {
+      res.render('index2', {logged_in: false})
+    }
+  })
 };
 
 exports.store = function(req, res) {

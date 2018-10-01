@@ -21,6 +21,8 @@ router.get('/signupform', function(req, res) {
   res.render('signupform');
 });
 
+router.get('/storemenu', product_controller.storemenu);
+
 router.get('/store', product_controller.store);
 
 router.post('/login', user_controller.user_login_post);
