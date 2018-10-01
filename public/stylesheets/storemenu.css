@@ -181,6 +181,9 @@ sup{
   #footer-list li{
     padding: 1%;
   }
+  .category-head{
+    width: 50%;
+  }
   .category{
     width: 33%;
     display: inline-block;
