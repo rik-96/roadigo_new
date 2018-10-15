@@ -514,6 +514,9 @@ hr.styled:after { content: "§"; display: inline-block; position: relative; top:
     display: block;
     text-align: left;
   }
+  .topnav.responsive a:not(.navbar-brand){
+    margin-top: 5%;
+  }
   #slide-par{
     margin-top: 10%;
   }
