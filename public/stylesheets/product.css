@@ -1,3 +1,12 @@
+@font-face {
+  font-family: 'product';
+  src: url('/fonts/ProductSansRegular.ttf');
+}
+
+*{
+  font-family: 'product';
+}
+
 #product-head{
   text-align: center;
   font-size: calc(10px + 2vw);
@@ -55,9 +64,13 @@
 
 .product-price{
   text-align: center;
-  font-size: calc(5px + 1vw);
+  font-size: calc(6px + 0.7vw);
   margin-right: auto;
   margin-left: auto;
+}
+
+.prod-price{
+  color: #B12704;
 }
 
 #buybutton{

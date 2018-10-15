@@ -15,9 +15,12 @@ block content
         img(src='/images/shop/trial.jpg', alt='Product', onclick='openImg(this);')
   #prodpage-right
     #product-head= name
-    .product-price MRP: &#8377; #{price}
-    .product-price Today's price: &#8377; #{price}
-    .product-price You save: &#8377; 0
+    .product-price MRP: &nbsp;
+      span.prod-price &#8377; #{price}
+    .product-price Today's price: &nbsp;
+      span.prod-price &#8377; #{price}
+    .product-price You save: &nbsp;
+      span.prod-price &#8377; 0
     #buybutton
       a(href='/') ADD TO CART
     #description Description:

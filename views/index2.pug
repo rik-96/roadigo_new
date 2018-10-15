@@ -83,27 +83,20 @@ html
               |  Login
             a.dropdownmenu.fr(href="/signupform")
               |  Register
-    #slide-par.carousel.slide(data-ride='carousel', data-interval=3000)
-      ul.carousel-indicators
-        li.active(data-target='#slide-par', data-slide-to='0')
-        li(data-target='#slide-par', data-slide-to='1')
-        li(data-target='#slide-par', data-slide-to='2')
-      .carousel-inner
-        .carousel-item.active
-          #carousel-text1.carousel-text Roadigo
-            .tagline
-              em the automotive marketplace
-          img(src='/images/shop/img10.jpg', alt='Product')
-        .carousel-item
-          #carousel-text2.carousel-text Shop for cool products
-          img(src='/images/shop/img9.jpg', alt='Product')
-        .carousel-item
-          #carousel-text3.carousel-text Crazy deals and discounts
-          img(src='/images/shop/img11.jpg', alt='Product')
-      a.carousel-control-prev(href='#slide-par', data-slide='prev')
-        span.carousel-control-prev-icon
-      a.carousel-control-next(href='#slide-par', data-slide='next')
-        span.carousel-control-next-icon
+    .initbg
+      .follow
+        a(href='/')
+          i.fa.fa-facebook-square
+        br
+        a(href='/')
+          i.fa.fa-google-plus-square
+        br
+        a(href='/')
+          i.fa.fa-twitter
+        br
+        a(href='/')
+          i.fa.fa-instagram
+        br
     .fixed-top
       #navbar.topnav.topnav2
         a.active.navbar-brand(href='/')
@@ -121,102 +114,50 @@ html
               |  Login
             a.dropdownmenu.fr(href="/signupform")
               |  Register
-    .content.container
-      #store.section-title Store
-      hr.hrofhead.below_section-title
-      .row
-        .col-lg-3.col-md-3.col-sm-3.col-6.thumb.hidden-view
-          .hidden-view
-            a.thumbnail(href='/product/6')
-              img.img-thumbnail(src='/images/shop/img6.jpeg', alt='product')
-              hr.hrofhead
-              .prod-detail Men's Tee
-              .prod-price ₹ 999
-        .col-lg-3.col-md-3.col-sm-3.col-6.thumb.hidden-view
-          .hidden-view
-            a.thumbnail(href='/product/1')
-              img.img-thumbnail(src='/images/shop/img1.jpg', alt='product')
-              hr.hrofhead
-              .prod-detail Men's Tee
-              .prod-price ₹ 999
-        .col-lg-3.col-md-3.col-sm-3.col-6.thumb.hidden-view
-          .hidden-view
-            a.thumbnail(href='/product/2')
-              img.img-thumbnail(src='/images/shop/img2.jpg', alt='product')
-              hr.hrofhead
-              .prod-detail Men's Tee
-              .prod-price ₹ 999
-        .col-lg-3.col-md-3.col-sm-3.col-6.thumb.hidden-view
-          .hidden-view
-            a.thumbnail(href='/product/3')
-              img.img-thumbnail(src='/images/shop/img3.jpeg', alt='product')
-              hr.hrofhead
-              .prod-detail Men's Tee
-              .prod-price ₹ 999
-      .row
-        .col-lg-3.col-md-3.col-sm-3.col-6.thumb.hidden-view
-          .hidden-view
-            a.thumbnail(href='/product/4')
-              img.img-thumbnail(src='/images/shop/img4.jpeg', alt='product')
-              hr.hrofhead
-              .prod-detail Men's Tee
-              .prod-price ₹ 999
-        .col-lg-3.col-md-3.col-sm-3.col-6.thumb.hidden-view
-          .hidden-view
-            a.thumbnail(href='/product/5')
-              img.img-thumbnail(src='/images/shop/img5.jpeg', alt='product')
-              hr.hrofhead
-              .prod-detail Men's Tee
-              .prod-price ₹ 999
-        .col-lg-3.col-md-3.col-sm-3.col-6.thumb.hidden-view
-          .hidden-view
-            a.thumbnail(href='/product/6')
-              img.img-thumbnail(src='/images/shop/img6.jpeg', alt='product')
-              hr.hrofhead
-              .prod-detail Men's Tee
-              .prod-price ₹ 999
-        .col-lg-3.col-md-3.col-sm-3.col-6.thumb.hidden-view
-          .hidden-view
-            a.thumbnail(href='/product/1')
-              img.img-thumbnail(src='/images/shop/img1.jpg', alt='product')
-              hr.hrofhead
-              .prod-detail Men's Tee
-              .prod-price ₹ 999
-      .show-more
-        a(href='/storemenu') Show more
-      #service.section-title Services
-      hr.hrofhead.below_section-title
-      .row
-        .col-lg-3.col-md-3.col-sm-3.col-6.thumb.hidden-view
-          .hidden-view
-            a.thumbnail(href='/service/1')
-              img.img-thumbnail(src='/images/shop/img1.jpg', alt='product')
-              hr.hrofhead
-              .prod-detail Service
-              .prod-price ₹ 999
-        .col-lg-3.col-md-3.col-sm-3.col-6.thumb.hidden-view
-          .hidden-view
-            a.thumbnail(href='/service/1')
-              img.img-thumbnail(src='/images/shop/img1.jpg', alt='product')
-              hr.hrofhead
-              .prod-detail Service
-              .prod-price ₹ 999
-        .col-lg-3.col-md-3.col-sm-3.col-6.thumb.hidden-view
-          .hidden-view
-            a.thumbnail(href='/seervice/2')
-              img.img-thumbnail(src='/images/shop/img2.jpg', alt='product')
-              hr.hrofhead
-              .prod-detail Service
-              .prod-price ₹ 999
-        .col-lg-3.col-md-3.col-sm-3.col-6.thumb.hidden-view
-          .hidden-view
-            a.thumbnail(href='/service/3')
-              img.img-thumbnail(src='/images/shop/img3.jpeg', alt='product')
-              hr.hrofhead
-              .prod-detail Service
-              .prod-price ₹ 9999
-      .show-more
-        a(href='/storemenu') Show more
+    .content
+      .product-at-home(style='background-color: #fedb07')
+        img(src='/images/shop/pic1.jpeg')
+        .text Winter Wear
+      .product-at-home(style='background-color: #fff585')
+        img(src='/images/shop/pic4.jpeg')
+        .text Automotive Merch
+      .product-at-home(style='background-color: #dcdcdc')
+        img(src='/images/shop/pic7.jpeg')
+        .text Bags And Handbags
+      .product-at-home
+        .small-prod(style='background-color: #fbc058')
+          img.small-img(src='/images/shop/pic3.jpeg')
+          .small-text Fashion
+        .small-prod(style='background-color: #fedb07')
+          img.small-img(src='/images/shop/pic5.jpeg')
+          .small-text Fashion
+        .small-prod(style='background-color: #fff585')
+          img.small-img(src='/images/shop/pic11.jpeg')
+          .small-text Fashion
+        .small-prod(style='background-color: #dcdcdc')
+          img.small-img(src='/images/shop/pic8.jpeg')
+          .small-text Fashion
+      .product-at-home(style='background-color: #fbc058')
+        img(src='/images/shop/pic14.gif')
+        .text Styles
+      .product-at-home(style='background-color: #fedb07')
+        img(src='/images/shop/pic2.jpeg')
+        .text Clothing
+      .product-at-home(style='background-color: #fff585')
+        img(src='/images/shop/pic9.jpeg')
+        .text Clothing
+      .product-at-home(style='background-color: #dcdcdc')
+        img(src='/images/shop/pic10.jpeg')
+        .text Clothing
+    .about-roadigo
+      .about-head 
+        em
+          | We Are Roadigo.
+      .about-info
+        | Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        br
+        br
+        | Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur.
     footer
       #footer-head Roadigo
         sup ©

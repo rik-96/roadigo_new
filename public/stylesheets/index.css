@@ -28,14 +28,14 @@ body{
   width: 100%;
   height: 100%;
   text-align: center;
-  background-color: #fff;
+  background-image: linear-gradient(135deg, #060d2a, #2f195e, #742b97, #2f195e, #181349);
 }
 
 #logo{
   width: 30%;
   height: 30%;
   margin-top: 30vh;
-  fill: #cd2a1d;
+  fill: #fff;
 }
 
 #overlay h1 {
@@ -44,7 +44,7 @@ body{
   font-family: ‘Arial Narrow’, sans-serif;
   font-weight: 100;
   font-size: 1.1em;
-  color: #cd2a1d;
+  color: #fff;
   letter-spacing: 5px;
 }
 
@@ -117,16 +117,17 @@ body{
 }
 
 #navbar-at-landing{
-  background-color: #fff;
+  background-image: none;
+  background-color: transparent;
 }
 
 #navbar-at-landing a{
-  color: #cf3721;
+  color: #fff;
 }
 
 #navbar-at-landing a::after {
   content: '';
-  background: #cf3721;
+  background: #fff;
   display: block;
   height: 2px;
   width: 0;
@@ -137,50 +138,25 @@ body{
   width: 100%;
 }
 
-#slide-par{
-  margin-top: 5%;
-}
-
-.carousel-inner img {
+.initbg{
+  height: 100vh;
   width: 100%;
-  height: 80vh;
-}
-
-.carousel-text{
-  position: absolute;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url(/images/2.jpeg);
   color: #fff;
-  font-size: calc(15px + 3vw);
-  background-color: #222;
-  left: 0;
-  right: 0;
-  width: 60%;
-  margin: 25vh auto 0 auto;
-  text-align: center;
-  padding-top: 3%;
-  font-family: 'maxwell';
-  padding: 1%;
-  opacity: 0.9;
+  padding-top: 30vh;
+  text-align: right;
 }
 
-.carousel-text .tagline{
-  font-size: calc(8px + 0.5vw);
+.follow a{
+  display: block;
+  padding: 2% 5%;
+  color: #fff;
 }
 
-#carousel-text1{
-  width: 50%;
-  background-color: #cd2a1d;
-  padding-top: 1%;
-  color: #fdd900;
-}
-
-#carousel-text2{
-  background-color: #62d3fd;
-  color: #fa8281;
-}
-
-#carousel-text3{
-  background-color: #fdd900;
-  color: #d62c0d;
+.follow i{
+  font-size: calc(10px + 0.8vw);
 }
 
 .sticky {
@@ -195,9 +171,9 @@ body{
 }
 
 .topnav {
-  font-family: 'maxwell';
+  font-family: 'product';
   overflow: hidden;
-  background-color: #e00022;
+  background-image: linear-gradient(to right, #060d2a, #2f195e, #742b97, #2f195e, #181349);
 }
 
 .topnav a {
@@ -272,71 +248,28 @@ body{
   background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0));
 }
 
-.below_section-title {
-  animation: line-change 20s forwards;
-  animation-iteration-count: infinite;
- }
-
 .invis{
   display: none;
 }
 
-.section-title{
-  font-family: 'product';
-  font-size: calc(6px + 2vw);
-  text-align: center;
-  margin: 7% 0 0 0;
-  animation: border-change 20s forwards;
-  animation-iteration-count: infinite;
+.text-appear{
+    color: #fff;
+    position: absolute;
+    top: 0;
+    font-size: calc(10px + 1vw);
+    font-family: "poppins", monospace;
+    letter-spacing: .15em;
+    margin: 15% auto auto 10%;
+    overflow: hidden;
+    white-space: nowrap;
+    animation: typing 4s steps(40, end);
+    width: 0;
+    animation-fill-mode: forwards;
 }
 
-.content{
-  padding: 1%;
-}
-
-.row{
-  margin-top: 5%;
-}
-
-.thumb{
-  text-align: center;
-  margin: 2% 0;
-  font-size: calc(7px + 0.8vw);
-  padding-top: 5%;
-  height: 300px;
-}
-
-/*.thumb:not(:last-child){
-  border-right: 2px solid #5ea8a7;
-  animation: border-change 20s forwards;
-  animation-iteration-count: infinite;
-}*/
-
-.thumb .prod-detail{
-  margin-top: 2%;
-}
-
-.prod-price{
-  font-size: calc(6px + 0.5vw);
-}
-
-.thumbnail{
-  color: #301b28;
-}
-
-.thumbnail:hover{
-  color: #888;
-  opacity: 0.8;
-  text-decoration: none;
-  -webkit-transition: all 0.5s ease-in 0s;
-  transition: all 0.5s ease-in 0s;
-}
-
-.img-thumbnail{
-  height: 150px;
-  width: 150px;
-  padding: 0;
-  margin-bottom: 5%;
+@keyframes typing {
+    from {width: 0}
+    to {width: 80%}
 }
 
 @keyframes border-change {
@@ -373,19 +306,100 @@ body{
   }
 }
 
-.show-more{
-  text-align: center;
-  margin-top: 2%;
+.follow a{
+  display: inline-block;
 }
 
-.show-more a{
-  color: #388e3c;
-  font-size: calc(10px + 0.7vw)
+.content{
+  width: 100%;
+}
+
+.product-at-home{
+  position: relative;
+  width: 50%;
+  height: 60vh;
+  cursor: pointer;
+  float: left;
+}
+
+.product-at-home img:not(.small-img){
+  width: 100%;
+  height: 100%;
+  transition: opacity 0.8s;
+}
+
+.product-at-home .text{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin: auto;
+  font-size: calc(10px + 1vw);
+  opacity: 0;
+}
+
+.product-at-home:hover img:not(.small-img){
+  opacity: 0;
+}
+
+.product-at-home:hover .text{
+  opacity: 1;
+}
+
+.small-prod {
+  width: 50%;
+  display: inline-block;
+  position: relative;
+  height: 30vh;
+}
+
+.small-prod .small-text{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin: auto;
+  font-size: calc(7px + 0.7vw);
+  opacity: 0;
+}
+
+.small-prod .small-img{
+  width: 100%;
+  height: 100%;
+  transition: opacity 0.8s;
+}
+
+.small-prod:hover .small-img{
+  opacity: 0;
+}
+
+.small-prod:hover .small-text{
+  opacity: 1;
+}
+
+.about-roadigo{
+  float: left;
+  width: 100%;
+  background-color: #fff585;
+  color: #bf211f;
+  font-family: 'product';
+  padding: 10%;
+}
+
+.about-head{
+  font-size: calc(12px + 1.2vw);
+  margin-bottom: 6%;
+}
+
+.about-info{
+  font-size: calc(8px + 0.8vw);
 }
 
 footer{
   overflow: auto;
   margin-top: 5%;
+  float: left;
+  width: 100%;
 }
 
 #footer-head{
@@ -446,6 +460,12 @@ hr.styled:after { content: "§"; display: inline-block; position: relative; top:
 @media screen and (max-width: 600px){
   .home-title{
     margin-top: 25%;
+  }
+  .product-at-home{
+    height: 40vh;
+  }
+  .small-prod{
+    height: 20vh;
   }
   .topnav a{
     border: 0px solid #4d4dff;
