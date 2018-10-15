@@ -125,17 +125,12 @@ body{
   color: #fff;
 }
 
-#navbar-at-landing a::after {
-  content: '';
-  background: #fff;
+#navbar-at-landing a{
+  float: none;
   display: block;
-  height: 2px;
-  width: 0;
-  transition: width .3s;
-}
-
-#navbar-at-landing a:not(.navbar-brand):hover::after {
-  width: 100%;
+  text-align: left;
+  width: 20%;
+  margin-top: 2%;
 }
 
 .initbg{
@@ -212,19 +207,6 @@ body{
   transition: all 0.5s ease-in 0s;
   padding: 0.5% 1%;
   margin-top: 1%;
-}
-
-#navbar a::after {
-  content: '';
-  background: #fff;
-  display: block;
-  height: 2px;
-  width: 0;
-  transition: width .3s;
-}
-
-#navbar a:not(.navbar-brand):hover::after {
-  width: 100%;
 }
 
 .topnav .topnav-brand{
@@ -461,11 +443,8 @@ hr.styled:after { content: "§"; display: inline-block; position: relative; top:
   .home-title{
     margin-top: 25%;
   }
-  .product-at-home{
-    height: 40vh;
-  }
-  .small-prod{
-    height: 20vh;
+  #navbar-at-landing a{
+    margin-top: 5%;
   }
   .topnav a{
     border: 0px solid #4d4dff;
@@ -513,6 +492,7 @@ hr.styled:after { content: "§"; display: inline-block; position: relative; top:
     float: none;
     display: block;
     text-align: left;
+    width: 20%;
   }
   .topnav.responsive a:not(.navbar-brand){
     margin-top: 5%;
@@ -525,6 +505,13 @@ hr.styled:after { content: "§"; display: inline-block; position: relative; top:
   }
   #footer-list li{
     display: block;
+  }
+  .product-at-home{
+    width: 100%;
+    height: 300px;
+  }
+  .small-prod{
+    height: 150px;
   }
 }
 
