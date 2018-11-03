@@ -24,16 +24,16 @@ a{
   display: flex;
   justify-content: space-between;
   align-items: center;
-  color: #DD063D;
-  background-color: black;
-  padding: 1% 5% 1% 2%;
+  color: #fff;
+  background-image: linear-gradient(to right, #060d2a, #2f195e, #742b97, #2f195e, #181349);
+  padding: 0% 5% 0% 2%;
   position: fixed;
 }
 
 #logo{
-  width: 8%;
-  height: 8%;
-  fill: #DD063D;
+  width: 6%;
+  height: 6%;
+  fill: #fff;
 }
 
 #dropdown{
@@ -46,7 +46,7 @@ a{
     border: none;
     outline: none;
     background-color: transparent;
-    color: #DD063D;
+    color: #fff;
 }
 
 .dropdown-content {
@@ -61,7 +61,7 @@ a{
 }
 
 .dropdown-content a {
-    color: #DD063D;
+    color: #2f195e;
     padding: 12px 16px;
     text-decoration: none;
     display: block;
@@ -77,8 +77,8 @@ a{
 }
 
 #brand-name {
-  font-family: 'maxwell';
-  font-size: calc(10px + 2.5vw);
+  font-family: 'product';
+  font-size: calc(6px + 1.5vw);
 }
 
 #dropdown i{
@@ -108,7 +108,7 @@ a{
 }
 
 .product-name{
-  color: #222;
+  color: #2f195e;
   font-size: calc(8px + 0.5vw);
   margin: 0 5%;
 }
