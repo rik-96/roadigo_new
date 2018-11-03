@@ -11,11 +11,17 @@ function appearDropDown(){
     $('.topnav2').addClass("responsive");
     $('.responsive').css('opacity');
     $('.responsive').addClass('in');
+    $('#bar-icon').hide();
+    $('#close-icon').show();
     //x.className += " responsive";
   } else if (x.className === "topnav topnav2 responsive") {
     x.className = "topnav topnav2";
+    $('#close-icon').hide();
+    $('#bar-icon').show();
   } else {
     x.className = "topnav topnav2 prod-navbar";
+    $('#close-icon').hide();
+    $('#bar-icon').show();
   }
 }
 
