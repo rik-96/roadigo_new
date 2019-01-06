@@ -3,7 +3,7 @@ html
   head
     meta(charset='UTF-8')
     meta(name='viewport', content='width=device-width, initial-scale=1.0')
-    link(rel='stylesheet', type='text/css', href='/stylesheets/ind.css')
+    link(rel='stylesheet', type='text/css', href='/stylesheets/example.css')
     link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css')
     script(src='https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js')
     script(src='/javascripts/ind.js')
@@ -21,42 +21,34 @@ html
           else
             a(href='/loginform/index') Login
             a(href='/signupform') Register
-            a(href='stores') Merchandise
+            a(href='#') Merchandise
             a(href='#') Apparel
             a(href='#') Bikes
             a(href='#') Cars
       .nav-item.nav-head
         strong Roadigo
       .nav-item
-        i.fa.fa-bell-o.nav-icon.fa-lg(aria-hidden='true')
-      if logged_in
-        .nav-item
-          form(action='/cartdisplay', method='POST')
-            input(type='hidden', name='email', value=email)
-            button#submit-button(type='submit', value='Services')
-              i.fa.fa-cart-plus.nav-icon.fa-lg(aria-hidden='true')
-      else
-        .nav-item
-          a(href='/loginform/index' style='color: black')
-            i.fa.fa-cart-plus.nav-icon.fa-lg(aria-hidden='true')
-      .nav-item
         i.fa.fa-search.nav-icon.fa-lg(aria-hidden='true')
-    #tag
-      | Aapka 
-      span(style='color: #2980b9') Gaadi
-      |  Online Banega
-      span(style='color: #2980b9') !
-    #cat
-      .cat-row
-        .cat-item
-          | Merchandise
-        .cat-item
-          | Apparel
-      .cat-row
-        .cat-item
-          | Bikes
-        .cat-item
-          | Cars
+      .nav-item
+        i.fa.fa-bell-o.nav-icon.fa-lg(aria-hidden='true')
+      .nav-item
+        i.fa.fa-cart-plus.nav-icon.fa-lg(aria-hidden='true')
+    #categories
+      .cattitle Category A
+      .prodrow
+        img(src='/images/shop/pic.png')
+        img(src='/images/shop/pic.png')
+        img(src='/images/shop/pic.png')
+      .cattitle Category B
+      .prodrow
+        img(src='/images/shop/pic.png')
+        img(src='/images/shop/pic.png')
+        img(src='/images/shop/pic.png')
+      .cattitle Category C
+      .prodrow
+        img(src='/images/shop/pic.png')
+        img(src='/images/shop/pic.png')
+        img(src='/images/shop/pic.png')
     footer
       #contact
         span#contact-head

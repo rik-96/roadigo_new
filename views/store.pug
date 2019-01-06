@@ -28,17 +28,30 @@ html
           i.fa.fa-user
           i.fa.fa-caret-down
         .dropdown-content
-          a(href='loginform') Login
-          a(href='signupform') Register
-          a(href='#') Cart
+          #logged_in
+            if logged_in
+              a(href='/store') Logout
+              a(href='#') Cart
+            else
+              a(href='/loginform/store') Login
+              a(href='signupform') Register
+              a(href='#') Cart
     .content
       if data
         each element in data
           .product-item
-            a(href='/product/'+element.prodid)
-              img.product-image(src=element.url)
-              .product-name!= element.name
-              .product-price &#8377; #{element.price}
+            if email
+                a#emaillink
+                  img.product-image(src=element.url)
+                  form(action='/product/'+element.prodid, method='POST')
+                    input(type='hidden', name='email', value=email)
+                    input.product-name(type='submit', value= element.name)
+                  .product-price &#8377; #{element.price}
+            else
+              a(href='/product/'+element.prodid)
+                img.product-image(src=element.url)
+                .product-name!= element.name
+                .product-price &#8377; #{element.price}
     footer
       #footer-head Roadigo
         sup ©

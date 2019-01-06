@@ -14,7 +14,7 @@ exports.product_list = function(req, res) {
 exports.storemenu = function(req, res) {
   Category.find({category: 'products'})
   .exec( function(err, found_prod){
-    if (err) { return res.render('index2', {logged_in: false}) }
+    if (err) { return res.render('index', {logged_in: false}) }
     if (found_prod) {
       var cat = {};
       found_prod.forEach(function(elem){
@@ -25,10 +25,9 @@ exports.storemenu = function(req, res) {
           cat[ele.subcategory] = [ele];
         }
       });
-      console.log(cat)
-      res.render('storemenu', {data: cat})
+      res.render('storemenu', {data: cat, email: req.body.email})
     } else {
-      res.render('index2', {logged_in: false})
+      res.render('index', {logged_in: false})
     }
   })
 };
@@ -38,7 +37,7 @@ exports.store = function(req, res) {
   .exec( function(err, found_prod){
     if (err) { return res.render('index2', {logged_in: false}) }
     if (found_prod) {
-      res.render('store', {data: found_prod})
+      res.render('store', {data: found_prod, email: req.body.email})
     } else {
       res.render('index2', {logged_in: false})
     }
@@ -54,7 +53,9 @@ exports.product_detail = function(req, res) {
         name: found_prod.name,
         url: found_prod.url,
         price: found_prod.price,
-        details: found_prod.details
+        details: found_prod.details,
+        email: req.body.email,
+        prodid: req.params.prodid
       })
     } else {
       res.render('index2', {logged_in: false})

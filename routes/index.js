@@ -6,30 +6,43 @@ var product_controller = require('../controllers/productController');
 
 /* GET home page. */
 router.get('/', function(req, res) {
-  res.render('index2', {logged_in: false});
+  res.render('index', {logged_in: false});
+});
+
+router.get('/error', function(req, res) {
+  res.render('err_page');
 });
 
 router.get('/logout', function(req, res) {
-  res.render('index2', {logged_in: false});
+  res.render('index', {logged_in: false});
 })
 
-router.get('/loginform', function(req, res) {
-  res.render('loginform');
+router.get('/stores', function(req, res) {
+  res.render('example', {logged_in: false});
+})
+
+router.get('/loginform/:page', function(req, res) {
+  page = req.params.page;
+  res.render('loginform', {page: page});
 });
 
 router.get('/signupform', function(req, res) {
   res.render('signupform');
 });
 
-router.get('/storemenu', product_controller.storemenu);
+router.post('/storemenu', product_controller.storemenu);
 
-router.get('/store', product_controller.store);
+router.post('/cartdisplay', user_controller.cartdisplay);
 
-router.post('/login', user_controller.user_login_post);
+router.post('/store', product_controller.store);
+
+router.post('/login/:page', user_controller.user_login_post);
 
 router.post('/signup', user_controller.user_create_post);
 
-router.get('/product/:prodid', product_controller.product_detail);
+router.post('/cart', user_controller.user_add_cart);
+
+router.post('/product/:prodid', product_controller.product_detail);
 
 router.get('/service/:servid', product_controller.service_detail);
 

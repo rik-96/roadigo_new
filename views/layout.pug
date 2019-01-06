@@ -22,10 +22,10 @@ html(lang='en')
           strong Roadigo
         a.icon.navbar-brand(href='javascript:void(0);', onclick='appearDropDown()')
           i.fa.fa-bars
-        a.dropdownmenu(href='#store') Store
-        a.dropdownmenu(href='#service') Services
+        a.dropdownmenu(href='/store') Store
+        a.dropdownmenu(href='/store') Services
         #logged_in
-          if logged_in
+          if email
             a.dropdownmenu.fr(href='/logout' class="pseudo-first")
               |  Logout
           else

@@ -28,8 +28,6 @@ html
           i.fa.fa-user
           i.fa.fa-caret-down
         .dropdown-content
-          a(href='/loginform') Login
-          a(href='/signupform') Register
           a(href='#') Cart
     .content
       if data
@@ -37,9 +35,16 @@ html
           .category-head!= key
           each element in ele
             .category
-              a(href = element.url)
-                img.category-img(src=element.imgurl)
-                .category-name!= element.name
+              if email
+                a#emaillink
+                  img.category-img(src=element.imgurl)
+                  form(action=element.url, method='POST')
+                    input(type='hidden', name='email', value=email)
+                    input.category-name(type='submit', value= element.name)
+              else
+                a(href = element.url)
+                  img.category-img(src=element.imgurl)
+                  .category-name!= element.name
     footer
       #footer-head Roadigo
         sup ©

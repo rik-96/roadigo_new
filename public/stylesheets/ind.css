@@ -1,0 +1,160 @@
+*{
+  padding: 0;
+  margin: 0;
+  font-family: sans-serif;
+}
+
+#navbar {
+  border-bottom: 1px solid #888;
+  text-align: center;
+}
+
+#submit-button{
+  display: inline-block;
+  vertical-align: middle;
+  border: none;
+  background-color: #fff;
+  color: #000;
+  cursor: pointer;
+}
+
+.nav-item{
+  color: black;
+  padding: 2%;
+  display: inline-block;
+  cursor: pointer;
+}
+
+#drpdwn-parent{
+  position: relative;
+}
+
+#drpdwn{
+  position: absolute;
+  background-image: linear-gradient(135deg, #2980b9, #2c3e50);
+  color: white;
+  padding: 10px;
+  display: none;
+  -webkit-box-shadow: 3px 3px 5px 0px #ccc;
+  -moz-box-shadow:    3px 3px 5px 0px #ccc;
+  box-shadow:         3px 3px 5px 0px #ccc;
+}
+
+#drpdwn a{
+  font-size: 0.8em;
+  padding: 6px;
+  display: block;
+  color: white;
+  text-decoration: none;
+}
+
+.nav-item:not(.nav-head):not(.bar-icon){
+  float: right;
+}
+
+.nav-head {
+  font-size: 2em;
+  padding: 1.8%;
+  font-family: sans-serif;
+  padding-left: 10%;
+}
+
+.bar-icon{
+  float: left;
+}
+
+#tag{
+  text-align: center;
+  padding: 14% 0;
+  font-family: sans-serif;
+  font-weight: 900;
+  font-size: 4em;
+}
+
+#cat {
+  width: 100%;
+  display: table;
+  border-spacing: 200px 100px;
+  border-collapse: separate;
+}
+
+.cat-item{
+  width: 30%;
+  height:300px;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  background-image: linear-gradient(135deg, #2980b9, #2c3e50);
+  font-size: 1.8em;
+  font-weight: 900;
+  font-family: sans-serif;
+  display: table-cell;
+  vertical-align: middle;
+  /*border: 1px solid white;
+  border-radius: 10%;*/
+  -webkit-box-shadow: 3px 3px 5px 1px #888;
+  -moz-box-shadow:    3px 3px 5px 1px #888;
+  box-shadow:         3px 3px 5px 1px #888;
+}
+
+.cat-row{
+  display: table-row;
+}
+
+footer{
+  background-color: #2c3e50;
+  height: 200px;
+  margin-top: 10%;
+  color: white;
+  padding: 5%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+footer div{
+  text-align: center;
+}
+
+#footer-other-explore{
+  border-left: 1px solid white;
+  border-right: 1px solid white;
+  align-self: center;
+}
+
+#footer-other-resource{
+  align-self: center;
+}
+
+#footer-other-resource-head{
+  font-size: 1.5em;
+  padding: 0 0 4% 0;
+}
+
+#footer-other-explore-head{
+  font-size: 1.5em;
+  padding: 0 0 4% 0;
+}
+
+.footer-other-explore-list{
+  padding: 1% 0;
+}
+
+.footer-other-resource-list{
+  padding: 1% 0;
+}
+
+#contact{
+  text-align: left;
+  font-family: sans-serif;
+  font-size: 1.5em;
+  padding-top: 10%;
+}
+
+#contact-head{
+  padding: 0 5%;
+}
+
+#contact i{
+  display: inline-block;
+  padding: 8% 2%;
+}

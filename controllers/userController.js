@@ -1,4 +1,13 @@
 var User = require('../models/user');
+var Product = require('../models/product');
+
+function not_includ(arr, obj){
+  if (arr.indexOf(obj) == -1)
+    return true;
+  else{
+    return false;
+  }
+}
 
 const { body, check, validationResult } = require('express-validator/check');
 const { sanitizeBody } = require('express-validator/filter');
@@ -40,7 +49,7 @@ exports.user_create_post = [
             if (err) {
               res.send(err);
             }
-            res.render('index2', {logged_in: true});
+            res.render('index', {logged_in: true});
           });
         }
       });
@@ -63,7 +72,7 @@ exports.user_login_post = [
         if (err) { return next(err); }
         if (found_user) {
           if (found_user.psw === req.body.psw){
-            res.render('index2', {logged_in: true});
+            res.render(req.params.page, {logged_in: true, email: found_user.email});
           } else {
             res.render('loginform', {errors: [{msg: 'Invalid credentials!'}]})
           }
@@ -74,6 +83,71 @@ exports.user_login_post = [
       }
   }
 ];
+
+exports.cartdisplay = function(req,res, next) {
+  User.findOne({ 'email': req.body.email })
+  .exec( function(err, found_user){
+    if (err){
+      res.render('index');
+    }
+    if (found_user) {
+      var cart_arr = found_user.cart;
+      var username = found_user.name;
+      if (cart_arr.length){
+        res.render('cartpage', {logged_in: true, cart: cart_arr, user: username})
+      }
+      else{
+        res.render('cartpage', {logged_in: true, user: username})
+      }
+    } else {
+      res.render('index', {logged_in: false})
+    }
+  })
+}
+
+exports.user_add_cart = function(req,res, next) {
+  User.findOne({ 'email': req.body.email })
+  .exec( function(err, found_user){
+    if (err){
+      res.render('index');
+    }
+    if (found_user) {
+      var cart_arr = [];
+      if (not_includ(found_user.cart, req.body.prodid)){
+        found_user.cart.push(req.body.prodid);
+      }
+      found_user.save(function(err){
+        if (err){
+          res.send(err);
+        }
+        found_user.cart.forEach(function(item){
+          Product.findOne({prodid: item})
+          .exec( function(err, found){
+            if (err) { return res.render('index2', {logged_in: false}) }
+            var found_prod = found.toObject();
+            console.log('found_prod');
+            console.log(found_prod);
+            cart_arr.push({
+              imgurl: found_prod.url,
+              prodname: found_prod.name,
+              prodprice: found_prod.price
+            });
+            console.log('pushed');
+            console.log(cart_arr);
+        });
+        });
+        console.log('data');
+        console.log(cart_arr);
+      })
+      .then(res.render('cart',
+          {
+            name: found_user.name,
+            data: cart_arr
+          })
+      ).catch((err)=>{console.log('errrr')})
+    }
+  });
+}
 
 exports.user_delete_get = function(req, res) {
   res.send('Not implemented: User delete Get');

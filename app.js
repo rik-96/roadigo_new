@@ -18,7 +18,7 @@ app.use(compression());
 
 var mongoose = require('mongoose');
 var mongoDB = process.env.MONGODB_URI || 'mongodb://roadigo_96:Ilyaroadigo2018@ds157422.mlab.com:57422/roadigo';
-mongoose.connect(mongoDB, { autoIndex: false });
+mongoose.connect(mongoDB, { autoIndex: false ,useNewUrlParser: true});
 mongoose.Promise = global.Promise;
 var db = mongoose.connection;
 db.on('error', console.error.bind(console, 'MongoDB connection error:'));

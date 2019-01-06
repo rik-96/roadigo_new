@@ -3,27 +3,27 @@ html(lang='en')
   head
     title Login
     meta(name='viewport', content='width=device-width, initial-scale=1.0')
-    link(rel='stylesheet', type='text/css', href='stylesheets/form.css')
+    link(rel='stylesheet', type='text/css', href='/stylesheets/form.css')
   body
     .container
       #form-brand roadigo
-      form(action='/login' method='POST')
-        .form-head Account Login
-        .row
-          .inputlabel
-            label(for='email') Email
-          .inputfield
-            input#email(type='text', name='email')
-        .row
-          .inputlabel
-            label(for='psw') Password
-          .inputfield
-            input#psw(type='password', name='psw')
-        .row
-          input(type='submit', value='Login', class="submit_button")
-        .row
-          if errors
-            ul
-              each element in errors
-                li.listoferrors= element.msg
-
+      #page
+        form(action='/login/'+page, method='POST')
+          .form-head Account Login
+          .row
+            .inputlabel
+              label(for='email') Email
+            .inputfield
+              input#email(type='text', name='email')
+          .row
+            .inputlabel
+              label(for='psw') Password
+            .inputfield
+              input#psw(type='password', name='psw')
+          .row
+            input(type='submit', value='Login', class="submit_button")
+          .row
+            if errors
+              ul
+                each element in errors
+                  li.listoferrors= element.msg

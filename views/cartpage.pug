@@ -3,10 +3,10 @@ html
   head
     meta(charset='UTF-8')
     meta(name='viewport', content='width=device-width, initial-scale=1.0')
-    link(rel='stylesheet', type='text/css', href='/stylesheets/ind.css')
     link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css')
+    link(rel='stylesheet', type='text/css', href='/stylesheets/cartpage.css')
     script(src='https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js')
-    script(src='/javascripts/ind.js')
+    script(src='/javascripts/cart.js')
   body
     #navbar
       #drpdwn-parent.nav-item.bar-icon
@@ -37,26 +37,18 @@ html
               i.fa.fa-cart-plus.nav-icon.fa-lg(aria-hidden='true')
       else
         .nav-item
-          a(href='/loginform/index' style='color: black')
-            i.fa.fa-cart-plus.nav-icon.fa-lg(aria-hidden='true')
+          i.fa.fa-cart-plus.nav-icon.fa-lg(aria-hidden='true')
       .nav-item
         i.fa.fa-search.nav-icon.fa-lg(aria-hidden='true')
-    #tag
-      | Aapka 
-      span(style='color: #2980b9') Gaadi
-      |  Online Banega
-      span(style='color: #2980b9') !
-    #cat
-      .cat-row
-        .cat-item
-          | Merchandise
-        .cat-item
-          | Apparel
-      .cat-row
-        .cat-item
-          | Bikes
-        .cat-item
-          | Cars
+    if user
+      .carttitle Welcome &nbsp;
+        span!= user
+    if cart
+      .cartcontenthead Your cart contains:
+      each item in cart
+        .cartcontent= item
+    else
+      .cartcontenthead Your cart is empty!
     footer
       #contact
         span#contact-head

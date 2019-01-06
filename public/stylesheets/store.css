@@ -47,6 +47,7 @@ a{
     outline: none;
     background-color: transparent;
     color: #fff;
+    cursor: pointer;
 }
 
 .dropdown-content {
@@ -70,10 +71,6 @@ a{
 
 .dropdown-content a:hover {
     background-color: #ddd;
-}
-
-#dropdown:hover .dropdown-content {
-    display: block;
 }
 
 #brand-name {
@@ -111,6 +108,9 @@ a{
   color: #2f195e;
   font-size: calc(8px + 0.5vw);
   margin: 0 5%;
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
 }
 
 .product-price{

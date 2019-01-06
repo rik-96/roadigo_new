@@ -23,13 +23,11 @@
 
 body{
   /*background-image: linear-gradient(135deg, #e3463a, #cd2a1d, #af2419);*/
-  background-image: linear-gradient(135deg, #060d2a, #2f195e, #742b97, #2f195e, #181349);
-  background-repeat: no-repeat;
   min-height: 100vh;
 }
 
 #form-brand{
-  color: #fff;
+  color: #2980b9;
   font-size: calc(10px + 1.3vw);
   font-family: 'maxwell';
 }
@@ -84,7 +82,7 @@ input[type=checkbox]{
 
 /* Style the submit button */
 input[type=submit] {
-  background-image: linear-gradient(135deg, #060d2a, #2f195e, #742b97, #2f195e, #181349);
+  background-image: linear-gradient(135deg, #2980b9, #2c3e50);
   color: white;
   border: none;
   width: 20%;

@@ -223,6 +223,13 @@ body{
   margin-right: 15px;
 }
 
+.dropdownmenu input{
+  background-color: transparent;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
 .hrofhead {
   border: 0;
   margin-top: 0;

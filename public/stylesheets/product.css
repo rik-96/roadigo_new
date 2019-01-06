@@ -77,11 +77,14 @@
   cursor: pointer;
   margin: 2% auto 2% auto;
   width: 34%;
-  background-color: #9c3;
+  /*background-color: #9c3;*/
+  background-image: linear-gradient(to right, #060d2a, #2f195e, #742b97, #2f195e, #181349);
   text-decoration: none;
   padding: 1%;
   text-align: center;
   font-size: calc(5px + 1vw);
+  color: white;
+  border: none;
 }
 
 #buybutton a{
